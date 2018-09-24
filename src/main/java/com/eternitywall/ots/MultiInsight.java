@@ -33,8 +33,8 @@ public class MultiInsight {
             //insightUrls.add("https://www.localbitcoinschain.com/api");
             //insightUrls.add("https://insight.bitpay.com/api");
             //insightUrls.add("https://finney.calendar.eternitywall.com/insight-api");
-            insightUrls.add("https://btc-bitcore1.trezor.io/api");
-            //insightUrls.add("https://btc-bitcore4.trezor.io/api");
+            //insightUrls.add("https://btc-bitcore1.trezor.io/api");
+            insightUrls.add("https://btc-bitcore4.trezor.io/api");
             insightUrls.add("https://blockexplorer.com/api");
         } else if(chain.equals("litecoin")) {
             insightUrls.add("https://ltc-bitcore1.trezor.io/api");
@@ -85,7 +85,7 @@ public class MultiInsight {
                     }
                     results.add(blockHeader);
                 } catch (JSONException e) {
-                    log.warning("Cannot parse merkleroot from body: " + jsonObject);
+                    log.warning("Cannot parse merkleroot from body: " + jsonObject + ". URL: " + take.getFromUrl());
                 }
             }
         }
